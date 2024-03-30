@@ -8,9 +8,10 @@ public class Order {
     public Order(String id, String deliveryTime) {
 
      id=this.id;
-        int str=Integer.parseInt(deliveryTime.substring(0,2));
-        int str2=Integer.parseInt( deliveryTime.substring(2,4));
-       this.deliveryTime=str*60 +str2;
+       String[] parts = deliveryTime.split(":");
+        int hours = Integer.parseInt(parts[0]);
+        int minutes = Integer.parseInt(parts[1]);
+        this.deliveryTime= hours * 60 + minutes;
     }
 
     public String getId() {
