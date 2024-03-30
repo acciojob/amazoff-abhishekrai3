@@ -7,7 +7,7 @@ public class Order {
 
     public Order(String id, String deliveryTime) {
 
-     id=this.id;
+     this.id=id;
        String[] parts = deliveryTime.split(":");
         int hours = Integer.parseInt(parts[0]);
         int minutes = Integer.parseInt(parts[1]);
