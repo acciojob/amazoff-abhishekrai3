@@ -7,8 +7,10 @@ public class Order {
 
     public Order(String id, String deliveryTime) {
 
-        id=this.id;
-       this.deliveryTime=Integer.parseInt(deliveryTime);
+     id=this.id;
+        int str=Integer.parseInt(deliveryTime.substring(0,2));
+        int str2=Integer.parseInt( deliveryTime.substring(2,4));
+       this.deliveryTime=str*60 +str2;
     }
 
     public String getId() {
